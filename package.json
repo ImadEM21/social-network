@@ -1,5 +1,5 @@
 {
-  "name": "social-network",
+  "name": "social-network-back",
   "version": "1.0.0",
   "description": "A social network",
   "main": "index.js",
