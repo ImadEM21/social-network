@@ -5,6 +5,7 @@ const path = require('path');
 const cors = require('cors');
 
 const postRoute = require('./routes/posts');
+const userRoute = require('./routes/users');
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use('/api', postRoute);
+app.use('/api', userRoute);
 
 
 module.exports = app;
