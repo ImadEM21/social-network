@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
 
+const postRoute = require('./routes/posts');
+
 const app = express();
 
 mongoose.connect('mongodb://localhost/social-network', {
@@ -18,6 +20,8 @@ mongoose.connect('mongodb://localhost/social-network', {
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use('/api', postRoute);
 
 
 module.exports = app;
